@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Goodreads to Lectulandia",
+  "version": "1.0",
+  "description": "Añade un botón directo a Lectulandia desde Goodreads.",
+  "icons": {
+    "16": "icon16.png",
+    "64": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [],
+  "host_permissions": [
+    "*://*.lectulandia.co/*",
+    "*://*.lectulandia.net/*",
+    "*://*.lectulandia.to/*",
+    "*://*.lectulandia.org/*",
+    "*://*.lectulandia.cc/*",
+    "*://www.goodreads.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.goodreads.com/book/show/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
+}

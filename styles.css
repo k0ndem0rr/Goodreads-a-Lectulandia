@@ -1,0 +1,38 @@
+#lectulandia-btn {
+    transition: filter 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+/* Estado: Pensando / Buscando */
+.lectulandia-loading {
+    background-color: #f3f4f6 !important;
+    color: #9ca3af !important;
+    border: 1px solid #e5e7eb !important;
+    pointer-events: none;
+}
+
+/* Estado: Encontrado (Verde corporativo exacto de Goodreads) */
+.lectulandia-found {
+    background-color: #3f8363 !important;
+    color: #ffffff !important;
+    border: 1px solid #3f8363 !important;
+}
+
+/* El hover ahora aclara el botón */
+.lectulandia-found:hover {
+    background-color: #409970 !important;
+    text-decoration: none !important;
+    border: 1px solid #409970 !important;
+}
+
+/* Estado: Fallback / Buscar (Naranja) */
+.lectulandia-fallback {
+    background-color: #d97706 !important;
+    color: #ffffff !important;
+    border: 1px solid #d97706 !important;
+}
+
+/* El hover naranja también se aclara */
+.lectulandia-fallback:hover {
+    filter: brightness(1.15) !important;
+    text-decoration: none !important;
+}
