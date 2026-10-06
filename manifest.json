@@ -22,7 +22,10 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://www.goodreads.com/book/show/*"],
+      "matches": [
+        "*://www.goodreads.com/book/show/*",
+        "*://www.goodreads.com/*/book/show/*"
+      ],
       "js": ["content.js"],
       "css": ["styles.css"]
     }
